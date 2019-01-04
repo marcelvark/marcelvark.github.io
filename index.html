@@ -1,11 +1,277 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>MarcelVark - GitHub</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <p>Now how to commit these changes to GitHub?</p>
-    <a href="/path/deeper.html">test</a>
-  </body>
+<html lang="en">
+
+<head>
+   <!--
+      Add your own boilerplate markup here.
+   -->
+
+   <base href="">
+
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <link rel="apple-touch-icon" href="/_images/apple-touch-icon.png">
+   <link rel="icon" href="/_images/favicon.png">
+
+   <title>PiHPe</title>
+
+   <!-- Layout CSS ----------------------------------------------------------->
+
+   <style>
+      @font-face {
+         font-family: Mono;
+         src: url("/_fonts/sourcecodepro-regular-webfont.woff2") format('woff2');
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      body { background-color: #444; }
+      h1, h2, h3 { color: LightGreen; }
+      p, li, pre, small { color: Silver; }
+      a { color: LightSkyBlue; }
+      kbd { color: White; }
+      hr { background-image: linear-gradient(to right, #fff3, transparent); height: 0.2rem; border: none; width: 100%; }
+
+      *:focus { outline: 0.12rem dashed LightSkyBlue; outline-offset: 0.1rem; }
+      ::-moz-selection { background: Khaki; color: White; }
+      ::selection { background: Khaki; color: White; }
+
+      html { font-size: calc(1rem + 0.3vw); font-family: Sans; }
+      h1, h2, h3, a, kbd { letter-spacing: 0.025em; font-family: Arial, sans-serif; }
+      h1, h2, h3 { font-weight: normal; }
+      h1 { font-size: 3rem; }
+      h2 { font-size: 2rem; }
+      h3 { font-size: 1rem; }
+      p a, p kbd { font-size: 89%; }
+      p, li { line-height: 160%; letter-spacing: 0.036em; font-family: Times New Roman, serif; }
+      pre, code { font-size: 0.6rem; font-family: Mono, monospace; }
+      /*pre, code { font-size: 0.6rem; letter-spacing: 0.025em; font-family: Courier New, monospace; }*/
+      /*pre { line-height: 130%; }*/
+      small { font-size: 0.8rem; letter-spacing: 0.045em; }
+
+      h1, h2 { width: 100%; }
+      a { padding: 0.2em 0; text-decoration: none; }
+      a:hover { border-bottom: 0.1em solid LightSkyBlue; }
+      ul, ol { padding-left: 1em; }
+      ul { list-style-type: square; }
+      pre { overflow: hidden; white-space: pre-wrap; }
+
+      html { padding-bottom: calc(50vh - 6vw); overscroll-behavior-y: contain; }
+      main { padding: 0 3vw 1vw; display: flex; flex-wrap: wrap; }
+      main > section { margin: 0 1vw 6vw 0; width: 29rem; }
+      h1, h2, h3, p, ul, ol, pre { margin: 0.5rem 0; }
+      hr { margin: 0 0 6vw; }
+   </style>
+
+   <!-- Content CSS ---------------------------------------------------------->
+
+       
+   <!-- Page header ---------------------------------------------------------->
+
+   <style>
+      header { min-height: 100vh; }
+      h1 { line-height: 100vh; text-align: middle; font-size: 6rem; margin: 0; }
+      h1 a { padding: 0; color: inherit; }
+      h1 a:hover { border: none; }
+      footer { color: Gray; font-size: 0.8rem; letter-spacing: 0.025em; font-family: Arial, sans-serif; }
+      footer { padding-top: 0.5rem; position: absolute; top: 0; }
+   </style>
+ 
+   <!-- Info ----------------------------------------------------------------->
+
+   <style>
+      h3 { color: White; letter-spacing: 0.05em; }
+
+      /*ul { list-style: none; }
+      li::before { margin: 0 0.5em 0 0; padding: 0; content: '■'; }*/
+
+      /*ol { padding-left: 0; counter-reset: count; list-style: none; }
+      ol li { counter-increment: count; }
+      ol li::before { 
+         content: counter(count) ''; 
+         padding: 0.1em 0.4em; margin-right: 1em; border-radius: 1em;
+         background-color: LightGreen; color: Black; 
+         font-size: 80%; font-weight: bold; font-family: Courier New, monospace; 
+         vertical-align: bottom;
+      }*/
+
+      li span, h3 span { 
+         padding: 0.1em 0.35em; border-radius: 1em; background-color: Silver; color: Black; 
+         font-size: 0.7rem; font-weight: bold; font-family: Courier New, monospace; 
+         vertical-align: top;
+         /*display: none;*/
+      }
+
+      pre mark { color: LightGreen; background-color: transparent; }
+   </style>
+</head>
+
+<body>
+   <!-- Content -------------------------------------------------------------->
+
+   <main>
+       
+   <!-- Page header ---------------------------------------------------------->
+
+   <header>
+      <h1><a href="https://github.com/marcelvark/pihpe">PiHPe</a></h1>
+      <footer>Marcel Varkevisser | <a href="https://nl.linkedin.com/in/marcel-varkevisser">LinkedIn</a> | <a href="https://marcelvark.github.io">GitHub</a></footer>
+   </header>
+ 
+   <!-- Info ----------------------------------------------------------------->
+
+   <h2>What</h2>
+
+   <section>
+      <p>
+         A bit of PHP to help me create simple websites. In particular to:
+         <ul>
+            <li>isolate content in separate files <span>A</span></li>
+            <li>have relative paths and links sorted <span>B</span></li>
+            <li>create static versions (i.e. GitHub), too <span>C</span></li>
+            <li>use HTML/CSS/JS, with a bit of PHP</li>
+            <li>have proper syntax highlighting</li>
+         </ul>
+      </p>
+   </section>
+
+   <hr>
+
+   <h2>How</h2>
+
+   <section>
+      <h3>info.php <span>A</span></h3>
+      <p>
+         I like to spread my content over different files, making it much nicer to work on. Here's an example of a section:
+      </p>
+
+      <pre>
+&lt;? ob_start(); ?&gt; 
+   <mark>&lt;p&gt;A bit of PHP to help me create...&lt;/p&gt;</mark>
+&lt;? $body = ob_get_clean(); ?&gt;</pre>
+
+      <small>
+         Each file contains all HTML, CSS, and JavaScript for one section. External stylesheet and -script links are also declared here. Including them is managed by PiHPe.
+      </small>
+   </section>
+
+   <section>
+      <h3>header.php</h3>
+      <p>
+         And here's another one, easy to reuse on multiple pages!
+      </p>
+
+      <pre>
+&lt;? ob_start(); ?&gt; 
+   <mark>&lt;style&gt;
+      h1 { line-height: 100vh; }
+   &lt;/style&gt;</mark>
+&lt;? $style = ob_get_clean(); ?&gt;
+&lt;? ob_start(); ?&gt; 
+   <mark>&lt;h1&gt;PiHPe&lt;/h1&gt;</mark>
+&lt;? $body = ob_get_clean(); ?&gt;</pre>
+   </section>
+
+   <section>
+      <h3>/[pihpe]/paths.php <span>B</span></h3>
+      <p>
+         In <kbd>paths.php</kbd>, I map resources and paths to unique names:
+      </p>
+      <pre>
+$paths = [
+   <mark>'info'    =&gt; '/info.php',
+   'header'  =&gt; '/_php/header.php'</mark>,
+   'layout'  =&gt; '/_php/layout.php',
+   'favicon' =&gt; '/_images/favicon.png'
+];</pre>
+      </p>
+      
+      <small>
+         'How to choose a good resource name' could be a perfect name for a section. These paths can now be included anywhere using:
+      </small>
+
+      <pre>
+&lt;link rel=&quot;icon&quot; href=&quot;<mark>&lt;?= url('favicon'); ?&gt;</mark>&quot;&gt;</pre>
+   </section>
+
+   <section>
+      <h3>index.php</h3>
+      <p>
+         Creating pages is a matter of choosing which sections to use in what order, and which layout to use for rendering:
+      </p>
+      
+      <pre>
+parse([
+   <mark>'header',
+   'info'</mark>
+]);
+
+include($root . <mark>url('layout')</mark>);</pre>
+   </section>
+
+   <section>
+      <h3>layout.php</h3>
+      <p>
+         Design flexibility was one reason for creating PiHPe. I like to create layouts, and piece together my pages.
+      </p>
+
+      <pre>
+   &lt;style&gt;
+      <mark>h1 { color: LightGreen; }</mark>
+   &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<mark>&lt;main&gt;</mark>
+   &lt;? insert($body); ?&gt;
+<mark>&lt;/main&gt;</mark></pre>
+   </section>
+
+   <section>
+      <h3>/[pihpe]/build.php <span>C</span></h3>
+      <p>
+         For GitHub I added a minimalist static build facility. A visit to <a href="/[pihpe]/build.php">/[pihpe]/build.php</a> will save HTML for the files specified:
+      </p>
+
+      <pre>
+build([
+   <mark>'/index.php'</mark>
+]);</pre>
+
+      <small>
+         <i>A pattern based copy to isolate static files is already on my todo list.</i>
+      </small>
+   </section>
+
+   <hr>
+
+   <h2>Next</h2>
+
+   <section>
+      <p>
+         <ul>
+            <li>Test a build on GitHub.</li>
+            <li>Improve the build mechanism.</li>
+            <li>Create a simple template facility.</li>
+            <li>Finish this page. Add a Why section.</li>
+            <li>Write a proper README.md.</li>
+            <li>Add file-relative linking.</li>
+         </ul>
+      </p>
+   </section>
+   </main>
+
+   <!-- Layout scripts ------------------------------------------------------->
+
+   <script>
+      /*
+         Add generic scripts here.
+      */
+   </script>
+
+   <!-- Content scripts ------------------------------------------------------>
+
+   <script src="/_js/dummy.js"></script>
+    
+</body>
 </html>
