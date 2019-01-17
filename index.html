@@ -32,8 +32,8 @@
       hr { background-image: linear-gradient(to right, #fff3, transparent); }
 
       *:focus { outline: 0.12rem dashed SkyBlue; outline-offset: 0.1rem; }
-      ::-moz-selection { background: LightGreen; color: Black; }
-      ::selection { background: rgba(144, 238, 144, 0.99); color: Black; }
+      ::-moz-selection { background: LightGreen; color: #444; }
+      ::selection { background: rgba(144, 238, 144, 0.99); color: #444; }
 
       html { font-size: calc(1rem + 0.3vw); font-family: Sans; }
       h1, h2, h3, a, kbd { letter-spacing: 0.025em; font-family: Arial, sans-serif; }
@@ -208,7 +208,7 @@ include($root . <mark>url('layout')</mark>);</code></pre>
    <section>
       <h3><mark>[pihpe]/build.php <span>C</span></mark></h3>
       <p>
-         For GitHub I needed a static build facility. A simple visit to <a href="/[pihpe]/build.php">build.php</a> does a lot, for a little configuration.
+         For GitHub I needed a static build facility. A simple visit to <a href="/[pihpe]/build.php">build.php</a> does a lot, for little to no configuration.
       </p>
 
       <small><ol>
@@ -258,8 +258,8 @@ _js
 _php
    header.php
    layout.php
-about           <mark>Lowercase folder names map to nice URLs.</mark>
-   index.php    <mark>And so does index.php for page files.</mark>
+about           <mark>Lowercase folders will map to nice URLs, and help to</mark>
+   index.php    <mark>organize content. An index.php is built automatically.</mark>
 index.php
 info.php</pre>
    </section>
@@ -291,5 +291,16 @@ info.php</pre>
 
    <script src="/_js/dummy.js"></script>
     
+   <!-- Info ----------------------------------------------------------------->
+
+   <script>
+      window.onload = function(){
+         if (location.pathname.endsWith('.html')){
+            window.querySelector('a[href="/[pihpe]/build.php"]')
+               .setAttribute('href', '/[pihpe]/build.html');
+         }
+      }
+   </script>
+ 
 </body>
 </html>
