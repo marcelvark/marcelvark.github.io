@@ -28,7 +28,7 @@
       h1, h2, h3 { color: LightGreen; }
       p, li, pre, small { color: Silver; }
       a { color: SkyBlue; }
-      kbd { color: White; }
+      kbd { color: WhiteSmoke; }
       hr { background-image: linear-gradient(to right, #fff3, transparent); }
 
       *:focus { outline: 0.12rem dashed SkyBlue; outline-offset: 0.1rem; }
@@ -78,7 +78,7 @@
 
    <style>
       mark { background-color: transparent; }
-      h3 mark { color: White; letter-spacing: 0.05em; }
+      h3 mark { color: WhiteSmoke; letter-spacing: 0.05em; }
       pre mark, li mark { color: LightGreen; }
 
       li span, h3 span { 
@@ -118,6 +118,14 @@
       </p>
    </section>
 
+<!--    <section>
+      <h3>Tesla</h3>
+      <p>
+         Nikola Tesla (Servisch: Никола Тесла) (Smiljan, 10 juli 1856 – New York, 7 januari 1943) was een Servisch-Amerikaanse uitvinder, elektrotechnicus en natuurkundige. Hij wordt gezien als een van de grootste ingenieurs en uitvinders aller tijden.<br>
+         Naar Tesla is in 1960 de eenheid van magnetische fluxdichtheid vernoemd, de tesla (symbool T).
+      </p>
+   </section>
+ -->
    <hr>
 
    <h2>How</h2>
@@ -282,17 +290,11 @@ info.php</pre>
    <!-- Layout scripts ------------------------------------------------------->
 
    <script>
-      /*
-         Indicates whether the site is being served as static HTML.
-      */
-      const PiHPe = {
-         static: (Date.now() - 1547843159000 > 30000) // after 30s
-      }
    </script>
 
    <!-- Content scripts ------------------------------------------------------>
 
-   <script src="/_js/dummy.js"></script>
+   <script src="/_js/pihpe.js"></script>
     
    <!-- Info ----------------------------------------------------------------->
 
