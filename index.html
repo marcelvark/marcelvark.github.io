@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-   <base href="">
-
    <!-- ADD YOUR OWN BOILERPLATE MARKUP HERE --------------------------------->
 
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-   <link rel="apple-touch-icon" href="/_images/apple-touch-icon.png">
-   <link rel="icon" href="/_images/favicon.png">
+   <link rel="apple-touch-icon" href="../../_images/apple-touch-icon.png">
+   <link rel="icon" href="../../_images/favicon.png">
 
    <title>PiHPe</title>
 
@@ -19,7 +17,7 @@
    <style>
       @font-face {
          font-family: Mono;
-         src: url("/_fonts/sourcecodepro-regular-webfont.woff2") format('woff2');
+         src: url("../../_fonts/sourcecodepro-regular-webfont.woff2") format('woff2');
       }
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,7 +33,7 @@
       ::-moz-selection { background: LightGreen; color: #444; }
       ::selection { background: rgba(144, 238, 144, 0.99); color: #444; }
 
-      html { font-size: calc(1rem + 0.3vw); font-family: Sans; }
+      html { font-size: calc(1rem + 0.3vw); }
       h1, h2, h3, a, kbd { letter-spacing: 0.025em; font-family: Arial, sans-serif; }
       h1, h2, h3 { font-weight: normal; }
       h1 { font-size: 3rem; }
@@ -118,14 +116,6 @@
       </p>
    </section>
 
-<!--    <section>
-      <h3>Tesla</h3>
-      <p>
-         Nikola Tesla (Servisch: Никола Тесла) (Smiljan, 10 juli 1856 – New York, 7 januari 1943) was een Servisch-Amerikaanse uitvinder, elektrotechnicus en natuurkundige. Hij wordt gezien als een van de grootste ingenieurs en uitvinders aller tijden.<br>
-         Naar Tesla is in 1960 de eenheid van magnetische fluxdichtheid vernoemd, de tesla (symbool T).
-      </p>
-   </section>
- -->
    <hr>
 
    <h2>How</h2>
@@ -175,7 +165,7 @@
 ];</code></pre>
       
       <small>
-         'How to choose a good resource name' could be a perfect name for a section. These paths can now be included anywhere using:
+         'How to choose a good resource name' could be a perfect name for a section. These URLs can now be included anywhere using:
       </small>
 
       <pre>
@@ -193,7 +183,7 @@
    'info'</mark>
 ]);
 
-include($root . <mark>url('layout')</mark>);</code></pre>
+include(path(<mark>'layout'</mark>));</code></pre>
    </section>
 
    <section>
@@ -216,7 +206,7 @@ include($root . <mark>url('layout')</mark>);</code></pre>
    <section>
       <h3><mark>[pihpe]/build.php <span>C</span></mark></h3>
       <p>
-         For GitHub I needed a static build facility. A simple visit to <a href="/[pihpe]/build.php">build.php</a> does a lot, for little to no configuration.
+         For GitHub I needed a static build facility. A simple visit to <a href="../[pihpe]/build.php">build.php</a> does a lot, for little to no configuration.
       </p>
 
       <small><ol>
@@ -294,7 +284,7 @@ info.php</pre>
          Indicates whether the site is being served as static HTML.
       */
       const PiHPe = {
-         static: (Date.now() - 1547942875000 > 30000) // after 30s
+         static: (Date.now() - 1548503762000 > 30000) // after 30s
       }
    </script>
 
@@ -306,7 +296,8 @@ info.php</pre>
    <script>
       window.addEventListener('load', function(event){
          if (PiHPe.static){
-            document.querySelector('a[href="/[pihpe]/build.php"]').href = '/[pihpe]/build.html';
+            const link = document.querySelector('a[href$="build.php"]');
+            link.href = link.href.replace('build.php', 'build.html');
          }
       })
    </script>
